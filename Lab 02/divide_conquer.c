@@ -19,7 +19,7 @@ struct mix min_max(int l, int r)
 
 	else if(l == r - 1)
 	{
-		comp += 1;
+		comp += 1; // if() chcksum
 		if(data[l] > data[r]) ret.max = data[l], ret.min = data[r];
 		else ret.max = data[r], ret.min = data[l];
 		return ret;
