@@ -10,12 +10,18 @@ struct mix{
 struct mix min_max(int l, int r)
 {
 	struct mix ret, left, right;
-	
-	comp += 1; // if() checksum
 
 	if (l == r)
 	{
 		ret.min = ret.max = data[l];
+		return ret;
+	}
+
+	else if(l == r - 1)
+	{
+		comp += 1;
+		if(data[l] > data[r]) ret.max = data[l], ret.min = data[r];
+		else ret.max = data[r], ret.min = data[l];
 		return ret;
 	}
 
