@@ -40,8 +40,20 @@ int main()
 {
 	FILE *in = fopen("input.txt", "r");
 
+	if (!in)
+    {
+        printf("Error finding input.txt\n");
+        return 0;
+    }
+
 	int n = 0, x;
 	while (fscanf(in, "%d", &x) != EOF) n += 1;
+
+	if(!n)
+	{
+		printf("No value found in input.txt\n");
+		return 0;
+	}
 
 	data = (int *)malloc(sizeof(int) * n);
 	fseek(in, 0, SEEK_SET);
