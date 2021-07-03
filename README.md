@@ -1,3 +1,3 @@
-Implimented in C <3
+implemented in C <3
 
 :) :) :)
